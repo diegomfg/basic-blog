@@ -1,0 +1,34 @@
+<%- include ('partials/header') %>
+
+<!--Form to edit existing blog-->
+
+<div class="ui main text container segment">
+        
+        <div class="ui huge header"> Edit <%=blog.title%> </div>
+        
+                                                        <!--Keep an eye on this extension-->
+        <form method='POST' action='/blogs/<%=blog._id %>?_method=PUT' class='ui form'>
+            
+            <div class='field'>
+                <label for='title'>Blog title</label>
+                <input type='text' name='blog[title]' value='<%=blog.title%>' id='title'></input>
+            </div>
+            
+            <div class='field'>
+                <label for='imageurl'>Blog Image</label>
+                <input type='text' name='blog[image]' value='<%=blog.image%>' id='imageurl'></input>
+            </div>
+            
+            <div class='field'>
+                <label for='body'>Blog Content</label>
+                <textarea name='blog[body]' id='body'> <%-blog.body%> </textarea>
+            </div>
+            
+            <input type='submit' class='ui big red basic button' value='Submit'>
+            <a href='/blogs'><input type='button' class='ui big blue basic button' value='Return'></a>
+            
+        </form>
+        
+    </div>
+
+<%- include ('partials/footer') %>

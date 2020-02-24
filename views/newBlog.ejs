@@ -1,0 +1,31 @@
+<%- include ('partials/header') %>
+
+<!--form to create a new blog-->
+
+    <div class="ui main text container segment">
+        
+        <div class="ui huge header"> New Blog </div>
+        <form method='POST' action='/blogs' class='ui form'>
+            
+            <div class='field'>
+                <label for='title'>Blog Title</label>
+                <input type='text' name='blog[title]' placeholder='Title' id='title'></input>
+            </div>
+            
+            <div class='field'>
+                <label for='imageurl'>Blog Image</label>
+                <input type='text' name='blog[image]' placeholder='Image URL' id='imageurl'></input>
+            </div>
+            
+            <div class='field'>
+                <label for='body'>Blog Body</label>
+                <textarea name='blog[body]' id='body'></textarea>
+            </div>
+            
+            <input type='submit' class='ui big violet basic button'>
+        </form>
+        
+    </div>
+
+
+<%- include ('partials/footer') %>

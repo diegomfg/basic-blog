@@ -1,0 +1,23 @@
+i.icon {
+    font-size: 1.2em;
+}
+
+.container.main{
+    margin-top: 5.0em;
+}
+
+img.index {
+    
+    width: 500px;
+    height: 400px;
+    
+}
+
+body {
+    margin: 4em;
+}
+
+#deleteForm {
+    /*margin-top: 10px;*/
+    display: inline;
+}

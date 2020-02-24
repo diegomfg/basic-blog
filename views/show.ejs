@@ -1,0 +1,29 @@
+<%- include ('partials/header') %>
+
+<!--Individual Blog showpage-->
+
+<div class="ui main text container segment">
+    <div class="ui huge header"> <h3><%= blog.title %></h3> </div> 
+       <div class="ui top attached"> 
+           <div class="item">
+                <img class='ui centered rounded image' src="<%=blog.image%>">
+                <div class ='content'>
+                     <span><p><%= blog.created.toDateString() %></p></span> 
+                </div>
+                <div class = "description"><p><%- blog.body %></p></div>
+           </div>
+            <a class='ui big violet basic button' href='/blogs/<%=blog._id%>/edit'>Edit<a>
+                
+            <form action="/blogs/<%=blog._id%>?_method=DELETE" method='POST' id='deleteForm'>
+                
+                <button class='ui big red basic button'> Delete </button>
+                
+            </form>    
+       </div>
+</div>
+
+<%- include ('partials/footer') %>
+
+
+
+        
